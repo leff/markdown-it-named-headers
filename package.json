@@ -1,0 +1,35 @@
+{
+  "name": "markdown-it-named-headers",
+  "version": "0.0.1",
+  "description": "Headers have name attributes for markdown-it.",
+  "keywords": [
+    "markdown-it-plugin"
+  ],
+  "homepage": "https://bitbucket.org/leff0/markdown-it-named-headers",
+  "license": {
+    "type": "Unlicense",
+    "url": "http://unlicense.org/"
+  },
+  "author": {
+    "name": "Jason Brackins",
+    "url": ""
+  },
+  "files": [
+    "README.md",
+    "UNLICENSE",
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/leff0/markdown-it-named-headers"
+  },
+  "dependencies": {
+    "string": "^3.0.1"
+  },
+  "devDependencies": {
+    "markdown-it": "^4.0.1"
+  },
+  "scripts": {
+    "prepublish": "$npm_package_scripts_build"
+  }
+}
