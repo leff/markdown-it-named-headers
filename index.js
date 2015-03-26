@@ -3,12 +3,12 @@
 var string = require('string'),
     Token = require('markdown-it/lib/token');
 
-var slugify = function(s) {
+var default_slugify = function(s) {
   return string(s).slugify().toString();
 };
 
 var namedheaders = function(md, opts) {
-  opts = assign({}, namedheaders.defaults, opts);
+  var slugify = (opts.slugify) ? opts.slugify : default_slugify;
 
   var originalHeadingOpen = md.renderer.rules.heading_open;
 
@@ -20,7 +20,7 @@ var namedheaders = function(md, opts) {
         return acc + t.content;
       }, '');
 
-    var slug = opts.slugify(title);
+    var slug = slugify(title);
     tokens[idx].attrs.push(['name', slug]);
 
     if (originalHeadingOpen) {
