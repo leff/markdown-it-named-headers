@@ -8,7 +8,7 @@ var default_slugify = function(s) {
 };
 
 var namedheaders = function(md, opts) {
-  var slugify = (opts.slugify) ? opts.slugify : default_slugify;
+  var slugify = (opts && opts.slugify) ? opts.slugify : default_slugify;
 
   var originalHeadingOpen = md.renderer.rules.heading_open;
 
@@ -29,10 +29,6 @@ var namedheaders = function(md, opts) {
       return self.renderToken.apply(self, arguments);
     }
   };
-};
-
-namedheaders.defaults = {
-  slugify: slugify
 };
 
 module.exports = namedheaders;
