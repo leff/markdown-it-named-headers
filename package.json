@@ -27,9 +27,11 @@
     "string": "^3.0.1"
   },
   "devDependencies": {
-    "markdown-it": "^4.0.1"
+    "markdown-it": "^4.0.1",
+    "mocha": "^2.2.1",
+    "test": ">=0.0.1"
   },
   "scripts": {
-    "prepublish": "$npm_package_scripts_build"
+    "test": "node_modules/.bin/mocha test/all.js"
   }
 }
