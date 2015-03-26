@@ -6,8 +6,9 @@ A plugin for [markdown-it](https://github.com/markdown-it/markdown-it). Makes he
 # Example Header   -->   <h1 name="example-header">Example</h1>
 ```
 
-Cribbed heavily from https://github.com/valeriangalliat/markdown-it-anchor
+By default, it uses [string.js](http://stringjs.com/)'s [slugify](http://stringjs.com/#methods/slugify) to translate header text into a url safe name. You can override this. See _Options_.
 
+Cribbed heavily from https://github.com/valeriangalliat/markdown-it-anchor
 
 
 ## Usage
@@ -38,8 +39,6 @@ gulp.task('md', [], function() {
 
 ```js
 {
-   slugify: my_slug_function
+   slugify: my_slug_function // default string.js's slugify()
 }
 ```
-
-We use [string.js](http://stringjs.com/)'s [slugify](http://stringjs.com/#methods/slugify) method to translate the header text into a name.
