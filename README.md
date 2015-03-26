@@ -10,6 +10,11 @@ By default, it uses [string.js](http://stringjs.com/)'s [slugify](http://stringj
 
 Cribbed heavily from https://github.com/valeriangalliat/markdown-it-anchor
 
+## Install
+
+```
+npm install --save-dev markdown-it-named-headers
+```
 
 ## Usage
 
@@ -21,7 +26,7 @@ var md   = require('markdown-it'),
 md.use(mdnh, options);
 ```
 
-Use as part of a Gulp workflow:
+Use as part of a Gulp workflow: (Note: You don't need to require named-headers in your gulpfile. gulp-markdown-it takes care of that for you).
 ```js
 var gulp = require('gulp'),
     md = require('gulp-markdown-it');
