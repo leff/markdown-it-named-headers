@@ -1,6 +1,6 @@
 {
   "name": "markdown-it-named-headers",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Headers have name attributes for markdown-it.",
   "keywords": [
     "markdown-it-plugin"
