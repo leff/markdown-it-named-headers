@@ -1,7 +1,6 @@
 (function(){
 
-var string = require('string'),
-    Token = require('markdown-it/lib/token');
+var string = require('string');
 
 var default_slugify = function(s) {
   return string(s).slugify().toString();
