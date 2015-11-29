@@ -28,6 +28,11 @@ describe('MarkdownIt', function() {
         assert.equal( md.render('##### test'), '<h5 id="test">test</h5>\n');
         assert.equal( md.render('###### test'), '<h6 id="test">test</h6>\n');
       });
+
+      it('identical headers should have unique ids', function(){
+        assert.equal( md.render('# test\n# test'), '<h1 id="test">test</h1>\n<h1 id="test">test</h1>\n');
+        assert.equal( md.render('# test\n## test'), '<h1 id="test">test</h1>\n<h2 id="test">test</h2>\n');
+      });
     });
 
   });
