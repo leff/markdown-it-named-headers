@@ -20,7 +20,7 @@ var namedheaders = function(md, opts) {
       }, '');
 
     var slug = slugify(title);
-    tokens[idx].attrs.push(['name', slug]);
+    tokens[idx].attrs.push(['id', slug]);
 
     if (originalHeadingOpen) {
       return originalHeadingOpen.apply(this, arguments);
