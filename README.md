@@ -1,9 +1,9 @@
 # Markdown-it Named Headers
 
-A plugin for [markdown-it](https://github.com/markdown-it/markdown-it). Makes header elments have name attributes.
+A plugin for [markdown-it](https://github.com/markdown-it/markdown-it). Makes header elments have identifer attributes.
 
 ```
-# Example Header   -->   <h1 name="example-header">Example</h1>
+# Example Header   -->   <h1 id="example-header">Example</h1>
 ```
 
 By default, it uses [string.js](http://stringjs.com/)'s [slugify](http://stringjs.com/#methods/slugify) to translate header text into a url safe name. You can override this. See _Options_.
